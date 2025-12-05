@@ -24,6 +24,9 @@ function NoConnection() {
   if (!isOnline) {
     return (
       <div
+      style={{
+        marginBottom:"40px"
+      }}
       >
         <Alert 
         style={{
