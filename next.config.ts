@@ -1,0 +1,23 @@
+import type { NextConfig } from "next";
+import withPWAInit from "next-pwa";
+
+const withPWA = withPWAInit({
+  dest: "public",
+  register: true,
+  skipWaiting: true,
+  disable: process.env.NODE_ENV === "development",
+
+  fallbacks: {
+    document: "/offline.html",
+  },
+});
+
+const nextConfig: NextConfig = {
+  reactStrictMode: true,
+
+  webpack: (config) => {
+    return config;
+  },
+};
+
+export default withPWA(nextConfig);
