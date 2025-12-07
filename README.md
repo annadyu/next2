@@ -1,1 +1,1 @@
-https://next2-umber.vercel.app/
+https://next2-cx41.vercel.app/
